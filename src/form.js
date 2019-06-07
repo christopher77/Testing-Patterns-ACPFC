@@ -1,11 +1,14 @@
 import React from "react";
-import { render } from "react-dom";
 
-function Form({ label, placeholder }) {
+function Form({ label, placeholder, setNameCompany }) {
+  function setName(event) {
+    event.preventDefault();
+    setNameCompany(event.target.elements.name.value);
+  }
   return (
-    <form>
+    <form onSubmit={setName}>
       <label>{label}</label>
-      <input placeholder={placeholder} />
+      <input name="name" placeholder={placeholder} />
       <button type="submit">Next</button>
     </form>
   );
