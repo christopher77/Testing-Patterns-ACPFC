@@ -1,5 +1,6 @@
 import React from "react";
 import Form from "./form";
+import Chart from "./chart";
 
 function App() {
   const [nameCompany, setNameCompany] = React.useState(null);
@@ -24,15 +25,7 @@ function App() {
       />
     );
 
-  return (
-    <>
-      <h1>chart =)</h1>
-      <ul>
-        <li>Name Company: {nameCompany}</li>
-        <li>Name CEO: {nameCEO}</li>
-      </ul>
-    </>
-  );
+  return <Chart />;
 }
 
 export default App;
