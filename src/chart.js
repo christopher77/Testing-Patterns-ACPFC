@@ -1,4 +1,6 @@
+/** @jsx jsx */
 import React, { useState } from "react";
+import { jsx } from "@emotion/core";
 import Employee from "./employee";
 
 const data = [
@@ -37,11 +39,11 @@ const data = [
 function Chart() {
   const [list, setList] = useState(data);
 
-  function getChilds(id) {
+  function getChildren(id) {
     return list.filter(employee => employee.parentId === id);
   }
 
-  function addItem(item) {
+  function addChild(item) {
     setList([...list, item]);
   }
 
@@ -56,7 +58,7 @@ function Chart() {
           textAlign: "center"
         }}
       >
-        <Employee employee={list[0]} getChilds={getChilds} addItem={addItem} />
+        <Employee employee={list[0]} getChildren={getChildren} addChild={addChild} />
       </ul>
     </div>
   );
