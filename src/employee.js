@@ -63,7 +63,7 @@ function Employee({ employee, getChilds, addItem }) {
           css={{
             display: "flex",
             justifyContent: "space-between",
-            marginTop: "1em",
+            padding: "1em",
             position: "relative"
           }}
         >

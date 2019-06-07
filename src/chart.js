@@ -1,4 +1,6 @@
+/** @jsx jsx */
 import React, { useState } from "react";
+import { jsx } from "@emotion/core";
 import Employee from "./employee";
 
 const data = [
