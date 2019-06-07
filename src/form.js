@@ -1,9 +1,9 @@
 import React from "react";
 
-function Form({ label, placeholder, setNameCompany }) {
+function Form({ label, placeholder, saveName }) {
   function setName(event) {
     event.preventDefault();
-    setNameCompany(event.target.elements.name.value);
+    saveName(event.target.elements.name.value);
   }
   return (
     <form onSubmit={setName}>

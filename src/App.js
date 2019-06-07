@@ -2,17 +2,38 @@ import React from "react";
 import Form from "./form";
 
 function App() {
-  const [nameCompany, setNameCompany] = React.useState("Able");
+  const [nameCompany, setNameCompany] = React.useState(null);
+  const [nameCEO, setNameCEO] = React.useState(null);
 
-  return (
-    <>
+  function saveName(name) {
+    if (!nameCompany) {
+      setNameCompany(name);
+    } else {
+      setNameCEO(name);
+    }
+  }
+
+  if (!nameCompany) {
+    return (
       <Form
-        setNameCompany={setNameCompany}
+        saveName={saveName}
         label="Enter the name of the Company"
         placeholder="Company name"
       />
-      {/* <Form label="Enter the name of CEO " placeholder="CEO name" /> */}
-      <h1>{nameCompany}</h1>
+    );
+  }
+  if (!nameCEO) {
+    return (
+      <Form
+        saveName={saveName}
+        label="Enter the name of the CEO"
+        placeholder="Company CEO"
+      />
+    );
+  }
+  return (
+    <>
+      <h1>chart =)</h1>
     </>
   );
 }
