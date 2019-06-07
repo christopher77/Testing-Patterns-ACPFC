@@ -3,9 +3,9 @@ import React, { useState } from "react";
 import { jsx } from "@emotion/core";
 import "./Employee.css";
 
-function Employee({ employee, getChilds, addItem }) {
+function Employee({ employee, getChildren, handleCreateChild }) {
   const [child, setChild] = useState("");
-  const childs = getChilds(employee.id);
+  const children = getChildren(employee.id);
 
   function handleChange(e) {
     setChild(e.target.value);
@@ -13,12 +13,7 @@ function Employee({ employee, getChilds, addItem }) {
 
   function handleSubmit(event) {
     event.preventDefault();
-    addItem({
-      id: new Date().toString(),
-      name: child,
-      title: "------",
-      parentId: employee.id
-    });
+    handleCreateChild(child, "Dev", employee.id);
     setChild("");
   }
 
@@ -58,7 +53,7 @@ function Employee({ employee, getChilds, addItem }) {
           />
         </form>
       </div>
-      {childs.length !== 0 && (
+      {children.length !== 0 && (
         <ul
           css={{
             display: "flex",
@@ -67,12 +62,12 @@ function Employee({ employee, getChilds, addItem }) {
             position: "relative"
           }}
         >
-          {childs.map(child => (
+          {children.map(child => (
             <Employee
               employee={child}
-              getChilds={getChilds}
+              getChildren={getChildren}
               key={child.id}
-              addItem={addItem}
+              handleCreateChild={handleCreateChild}
             />
           ))}
         </ul>
