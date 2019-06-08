@@ -90,6 +90,36 @@ function Employee({ employee, getChildren, handleCreateChild }) {
                 zIndex: 110
               }}
             >
+<<<<<<< HEAD
+=======
+              X
+            </button>
+            <h3 css={{ margin: 0, fontWeight: "500", textAlign: "center" }}>
+            </h3>
+            <form onSubmit={handleSubmit} disabled={child.includes(child)}>
+              <input
+                type="text"
+                placeholder="Employee name "
+                value={child}
+                name="employeeName"
+                onChange={handleChange}
+                autoFocus
+                css={{
+                  border: "none",
+                  borderBottom: "1px solid #ccc",
+                  padding: ".5rem 1rem",
+                  fontSize: "1.2rem",
+                  boxSizing: "border-box",
+                  width: "100%",
+                  outline: "none",
+                  display: "block",
+                  transition: "border-bottom-color 300ms ease",
+                  ":focus": {
+                    borderBottomColor: blueBright
+                  }
+                }}
+              />
+>>>>>>> Add color
               <button
                 css={{
                   position: "absolute",
@@ -105,7 +135,11 @@ function Employee({ employee, getChildren, handleCreateChild }) {
                 aria-label="Close create employee dialog"
                 onClick={handleCloseClick}
               >
+<<<<<<< HEAD
                 X
+=======
+                Create new employee
+>>>>>>> Add color
               </button>
               <h3 css={{ margin: 0, fontWeight: "500", textAlign: "center" }}>
                 Create a new employee
