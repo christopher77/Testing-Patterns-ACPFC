@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Render employee 1`] = `
+<DocumentFragment>
+  <li
+    class="css-cqjg2n-Employee"
+  >
+    <div
+      class="css-98qhp7-Employee"
+    >
+       - 
+      <form>
+        <input
+          aria-label="Employee name"
+          id="employee-name"
+          placeholder="Employee name"
+          type="text"
+          value=""
+        />
+      </form>
+    </div>
+  </li>
+</DocumentFragment>
+`;

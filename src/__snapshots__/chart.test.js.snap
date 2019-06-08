@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Render the new chart 1`] = `
+<DocumentFragment>
+  <div
+    class="tree"
+  >
+    <ul
+      class="css-1rjgz6v-Chart"
+    >
+      <li
+        class="css-cqjg2n-Employee"
+      >
+        <div
+          class="css-98qhp7-Employee"
+        >
+          CEO - CEO
+          <form>
+            <input
+              aria-label="Employee name"
+              id="employee-name"
+              placeholder="Employee name"
+              type="text"
+              value=""
+            />
+          </form>
+        </div>
+        <ul
+          class="css-jneiqc-Employee"
+        >
+          <li
+            class="css-cqjg2n-Employee"
+          >
+            <div
+              class="css-98qhp7-Employee"
+            >
+              Carlos - Dev
+              <form>
+                <input
+                  aria-label="Employee name"
+                  id="employee-name"
+                  placeholder="Employee name"
+                  type="text"
+                  value=""
+                />
+              </form>
+            </div>
+            <ul
+              class="css-jneiqc-Employee"
+            >
+              <li
+                class="css-cqjg2n-Employee"
+              >
+                <div
+                  class="css-98qhp7-Employee"
+                >
+                  Daniel - Dev
+                  <form>
+                    <input
+                      aria-label="Employee name"
+                      id="employee-name"
+                      placeholder="Employee name"
+                      type="text"
+                      value=""
+                    />
+                  </form>
+                </div>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</DocumentFragment>
+`;

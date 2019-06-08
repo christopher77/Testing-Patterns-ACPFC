@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import React, { useState } from "react";
 import { jsx } from "@emotion/core";
-import "./Employee.css";
+import "./Global.css";
 
 function Employee({ employee, getChildren, handleCreateChild }) {
   const [child, setChild] = useState("");
