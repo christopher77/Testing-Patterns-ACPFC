@@ -21,7 +21,8 @@ function Form({ label, placeholder, saveName }) {
         height: "100vh",
         display: "flex",
         alignItems: "center",
-        justifyContent: "center"
+        justifyContent: "center",
+        backgroundColor: "#f9f9f9"
       }}
     >
       <form
@@ -29,11 +30,12 @@ function Form({ label, placeholder, saveName }) {
         css={{
           margin: "auto",
           backgroundColor: "white",
+          boxShadow: "0 2px 20px 0 rgba(0, 0, 0, 0.09)",
           borderRadius: ".5rem",
           padding: "2rem 1rem",
           fontSize: "25px",
           width: "80%",
-          maxWidth: 360,
+          maxWidth: 380,
           textAlign: "center"
         }}
       >
@@ -51,12 +53,15 @@ function Form({ label, placeholder, saveName }) {
         <input
           css={{
             border: "none",
+            borderBottom: "1px solid #ddd",
             padding: ".5rem 1rem",
             fontSize: "1.2rem",
             boxSizing: "border-box",
             width: "100%",
             outline: "none",
             transition: "border-bottom-color 300ms ease",
+            textAlign: "center",
+            margin: "1em 0",
             ":focus": {
               borderBottomColor: "#7E00F3"
             }
@@ -73,9 +78,11 @@ function Form({ label, placeholder, saveName }) {
           css={{
             backgroundColor: "blue",
             borderRadius: ".5rem",
+            border: "none",
             color: "white",
             width: "100%",
             padding: ".75rem .5rem",
+            marginTop: ".5em",
             boxSizing: "border-box",
             fontSize: ".9rem",
             fontWeight: "500",

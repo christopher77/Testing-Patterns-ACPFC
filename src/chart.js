@@ -2,10 +2,32 @@
 import React, { useState } from "react";
 import { jsx, Global } from "@emotion/core";
 import Employee from "./employee";
+import MobileChart from "./MobileChart";
+
+const initialMobile = window.innerWidth < 1000;
 
 function Chart({ employees, handleCreateChild }) {
+  const [mobile, setMobile] = React.useState(initialMobile);
+
+  React.useEffect(() => {
+    function updateDimensions() {
+      if (window.innerWidth < 1000) {
+        setMobile(true);
+      } else {
+        setMobile(false);
+      }
+    }
+    window.addEventListener("resize", updateDimensions);
+
+    return () => window.removeEventListener("resize", updateDimensions);
+  });
+
   function getChildren(id) {
     return employees.filter(employee => employee.parentId === id);
+  }
+
+  if (mobile) {
+    return <MobileChart getChildren={getChildren} parent={employees[0]} />;
   }
 
   return (
