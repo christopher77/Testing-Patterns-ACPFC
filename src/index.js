@@ -10,8 +10,13 @@ function Root() {
         styles={{
           body: {
             margin: 0,
+            backgroundColor: "#223fce",
+            color: "#fff",
             fontFamily:
-              "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif"
+              "'Jaldi', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif"
+          },
+          "h1, h2, h3, h4, h5, h6": {
+            fontWeight: "400"
           }
         }}
       />

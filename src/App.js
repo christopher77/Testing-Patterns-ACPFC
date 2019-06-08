@@ -24,6 +24,7 @@ function App() {
       id: new Date().toString(),
       name: value,
       title,
+      image: "https://i.imgur.com/Go7SE1T.png",
       parentId: parentId
     };
     setEmployees(state => [...new Set(state.concat(newEmployee))]);
