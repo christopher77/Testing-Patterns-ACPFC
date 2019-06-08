@@ -2,11 +2,41 @@
 
 exports[`Render employee 1`] = `
 <DocumentFragment>
-  <li
-    class="css-cqjg2n-Employee"
+  .emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  text-align: center;
+  list-style-type: none;
+  padding: 1em 0.5em 0 0.5em;
+}
+
+.emotion-0 {
+  border: 1px solid #ccc;
+  padding: 0.5em 0.75em;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 5px;
+  color: #333;
+  position: relative;
+  top: 1px;
+}
+
+<li
+    class="emotion-1"
   >
     <div
-      class="css-98qhp7-Employee"
+      class="emotion-0"
     >
        - 
       <form>

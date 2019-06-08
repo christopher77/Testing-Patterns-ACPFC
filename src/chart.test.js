@@ -2,7 +2,7 @@ import React from "react";
 import { render } from "@testing-library/react";
 import Chart from "./chart";
 
-test("Render the new chart", () => {
+test("Testing the new chart render", () => {
   const employees = [
     {
       id: "Fri Jun 07 2019 17:08:11 GMT-0500 (Peru Standard Time)",
