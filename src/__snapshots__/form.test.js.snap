@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The form use setter sended 1`] = `
+<DocumentFragment>
+  <div
+    class="css-11iycnh-Form"
+  >
+    <form
+      class="css-ua5s0o-Form"
+    >
+      <label
+        class="css-c1s87k-Form"
+        for="name"
+      >
+        label
+      </label>
+      <input
+        autocomplete="off"
+        class="css-bth6bn-Form"
+        id="name"
+        name="name"
+        placeholder="placeholder"
+        required=""
+        value=""
+      />
+      <button
+        class="css-1wg226x-Form"
+        type="submit"
+      >
+        Next
+      </button>
+    </form>
+  </div>
+</DocumentFragment>
+`;
