@@ -2,21 +2,86 @@
 
 exports[`The form use setter sended 1`] = `
 <DocumentFragment>
-  <div
-    class="css-11iycnh-Form"
+  .emotion-4 {
+  height: 100vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.emotion-3 {
+  margin: auto;
+  background-color: white;
+  border-radius: .5rem;
+  padding: 2rem 1rem;
+  font-size: 25px;
+  width: 80%;
+  max-width: 360px;
+  text-align: center;
+}
+
+.emotion-0 {
+  margin: 0;
+  font-weight: 500;
+  text-align: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.emotion-1 {
+  border: none;
+  padding: .5rem 1rem;
+  font-size: 1.2rem;
+  box-sizing: border-box;
+  width: 100%;
+  outline: none;
+  -webkit-transition: border-bottom-color 300ms ease;
+  transition: border-bottom-color 300ms ease;
+}
+
+.emotion-1:focus {
+  border-bottom-color: #7E00F3;
+}
+
+.emotion-2 {
+  background-color: blue;
+  border-radius: .5rem;
+  color: white;
+  width: 100%;
+  padding: .75rem .5rem;
+  box-sizing: border-box;
+  font-size: .9rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  outline: none;
+}
+
+<div
+    class="emotion-4"
   >
     <form
-      class="css-ua5s0o-Form"
+      class="emotion-3"
     >
       <label
-        class="css-c1s87k-Form"
+        class="emotion-0"
         for="name"
       >
         label
       </label>
       <input
         autocomplete="off"
-        class="css-bth6bn-Form"
+        class="emotion-1"
         id="name"
         name="name"
         placeholder="placeholder"
@@ -24,7 +89,7 @@ exports[`The form use setter sended 1`] = `
         value=""
       />
       <button
-        class="css-1wg226x-Form"
+        class="emotion-2"
         type="submit"
       >
         Next
