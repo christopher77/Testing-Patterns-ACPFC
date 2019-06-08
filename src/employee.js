@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { jsx } from "@emotion/core";
 import "./Employee.css";
-import { blue } from "ansi-colors";
+import { blueBright } from "ansi-colors";
 
 function Employee({ employee, getChildren, handleCreateChild }) {
   const [child, setChild] = useState("");
@@ -107,14 +107,15 @@ function Employee({ employee, getChildren, handleCreateChild }) {
               X
             </button>
             <h3 css={{ margin: 0, fontWeight: "500", textAlign: "center" }}>
-              Create a new employee
             </h3>
             <form onSubmit={handleSubmit} disabled={child.includes(child)}>
               <input
                 type="text"
-                placeholder="Employee "
+                placeholder="Employee name "
                 value={child}
+                name="employeeName"
                 onChange={handleChange}
+                autoFocus
                 css={{
                   border: "none",
                   borderBottom: "1px solid #ccc",
@@ -126,7 +127,7 @@ function Employee({ employee, getChildren, handleCreateChild }) {
                   display: "block",
                   transition: "border-bottom-color 300ms ease",
                   ":focus": {
-                    borderBottomColor: blue
+                    borderBottomColor: blueBright
                   }
                 }}
               />
@@ -145,7 +146,7 @@ function Employee({ employee, getChildren, handleCreateChild }) {
                 }}
                 type="submit"
               >
-                Create new
+                Create new employee
               </button>
             </form>
           </div>
