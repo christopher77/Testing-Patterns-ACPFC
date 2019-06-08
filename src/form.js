@@ -38,6 +38,7 @@ function Form({ label, placeholder, saveName }) {
         }}
       >
         <label
+          htmlFor="name"
           css={{
             margin: 0,
             fontWeight: "500",
@@ -60,6 +61,7 @@ function Form({ label, placeholder, saveName }) {
               borderBottomColor: "#7E00F3"
             }
           }}
+          id="name"
           required="required"
           autoComplete="off"
           name="name"
