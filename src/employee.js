@@ -30,80 +30,91 @@ function Employee({ employee, getChildren, handleCreateChild }) {
   }
 
   return (
-    <>
-      <Global styles={general} />
-      <li
+    <li
+      css={{
+        display: "flex",
+        alignItems: "center",
+        flexDirection: "column",
+        position: "relative",
+        textAlign: "center",
+        listStyleType: "none",
+        padding: "1em 0.5em 0 0.5em"
+      }}
+    >
+      <div
         css={{
-          display: "flex",
-          alignItems: "center",
-          flexDirection: "column",
+          border: "1px solid #ccc",
+          padding: "0.5em 0.75em",
+          textDecoration: "none",
+          display: "inline-block",
+          borderRadius: "5px",
+          color: "#333",
           position: "relative",
-          textAlign: "center",
-          listStyleType: "none",
-          padding: "1em 0.5em 0 0.5em"
+          top: "1px"
         }}
       >
+        {employee.name} - {employee.title}
+        <button type="button" onClick={handleOpenClick}>
+          +
+        </button>
+      </div>
+      {isDialogOpen && (
         <div
           css={{
-            border: "1px solid #ccc",
-            padding: "0.5em 0.75em",
-            textDecoration: "none",
-            display: "inline-block",
-            borderRadius: "5px",
-            color: "#333",
-            position: "relative",
-            top: "1px"
+            backgroundColor: "rgba(0, 0, 0, .5)",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            position: "fixed",
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            zIndex: 100
           }}
         >
-          {employee.name} - {employee.title}
-          <button type="button" onClick={handleOpenClick}>
-            +
-          </button>
-        </div>
-        {isDialogOpen && (
           <div
+            role="dialog"
             css={{
-              backgroundColor: "rgba(0, 0, 0, .5)",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
+              background: "white",
+              border: "none",
+              borderRadius: ".25rem",
               position: "fixed",
-              top: 0,
-              left: 0,
-              right: 0,
-              bottom: 0,
-              zIndex: 100
+              top: "50%",
+              transform: "translateY(-50%)",
+              padding: "2rem 1rem",
+              width: "80%",
+              maxWidth: 360,
+              zIndex: 110
             }}
           >
-            <div
-              role="dialog"
+            <button
               css={{
-                background: "white",
-                border: "none",
-                borderRadius: ".25rem",
-                position: "fixed",
-                top: "50%",
-                transform: "translateY(-50%)",
-                padding: "2rem 1rem",
-                width: "80%",
-                maxWidth: 360,
-                zIndex: 110
+                backgroundColor: "28F6ED",
+                borderRadius: ".5rem",
+                color: "white",
+                width: "100%",
+                padding: ".75rem .5rem",
+                boxSizing: "border-box",
+                fontSize: ".9rem",
+                fontWeight: "500",
+                textTransform: "uppercase",
+                outline: "none"
               }}
+              aria-label="Close create employee dialog"
+              onClick={handleCloseClick}
             >
-<<<<<<< HEAD
-=======
               X
             </button>
             <h3 css={{ margin: 0, fontWeight: "500", textAlign: "center" }}>
+              Create a new employee
             </h3>
             <form onSubmit={handleSubmit} disabled={child.includes(child)}>
               <input
                 type="text"
-                placeholder="Employee name "
+                placeholder="Employee "
                 value={child}
-                name="employeeName"
                 onChange={handleChange}
-                autoFocus
                 css={{
                   border: "none",
                   borderBottom: "1px solid #ccc",
@@ -115,99 +126,52 @@ function Employee({ employee, getChildren, handleCreateChild }) {
                   display: "block",
                   transition: "border-bottom-color 300ms ease",
                   ":focus": {
-                    borderBottomColor: blueBright
+                    borderBottomColor: blue
                   }
                 }}
               />
->>>>>>> Add color
               <button
                 css={{
-                  position: "absolute",
-                  right: "1rem",
-                  top: "2rem",
-                  padding: ".5rem",
-                  fontSize: "1rem",
-                  background: "none",
-                  border: "none",
-                  display: "flex",
-                  alignContent: "center"
+                  backgroundColor: "lightblue",
+                  borderRadius: ".5rem",
+                  color: "white",
+                  width: "100%",
+                  padding: ".75rem .5rem",
+                  boxSizing: "border-box",
+                  fontSize: ".9rem",
+                  fontWeight: "500",
+                  textTransform: "uppercase",
+                  outline: "none"
                 }}
-                aria-label="Close create employee dialog"
-                onClick={handleCloseClick}
+                type="submit"
               >
-<<<<<<< HEAD
-                X
-=======
-                Create new employee
->>>>>>> Add color
+                Create new
               </button>
-              <h3 css={{ margin: 0, fontWeight: "500", textAlign: "center" }}>
-                Create a new employee
-              </h3>
-              <form onSubmit={handleSubmit} disabled={child.includes(child)}>
-                <input
-                  type="text"
-                  placeholder="Employee "
-                  value={child}
-                  onChange={handleChange}
-                  css={{
-                    border: "none",
-                    borderBottom: "1px solid #ccc",
-                    padding: ".5rem 1rem",
-                    fontSize: "1.2rem",
-                    boxSizing: "border-box",
-                    width: "100%",
-                    outline: "none",
-                    display: "block",
-                    transition: "border-bottom-color 300ms ease",
-                    ":focus": {
-                      borderBottomColor: blue
-                    }
-                  }}
-                />
-                <button
-                  css={{
-                    backgroundColor: "lightblue",
-                    borderRadius: ".5rem",
-                    color: "white",
-                    width: "100%",
-                    padding: ".75rem .5rem",
-                    boxSizing: "border-box",
-                    fontSize: ".9rem",
-                    fontWeight: "500",
-                    textTransform: "uppercase",
-                    outline: "none"
-                  }}
-                  type="submit"
-                >
-                  Create new
-                </button>
-              </form>
-            </div>
+            </form>
           </div>
-        )}
+        </div>
+      )}
 
-        {children.length !== 0 && (
-          <ul
-            css={{
-              display: "flex",
-              justifyContent: "space-between",
-              padding: "1em",
-              position: "relative"
-            }}
-          >
-            {children.map(child => (
-              <Employee
-                employee={child}
-                getChildren={getChildren}
-                key={child.id}
-                handleCreateChild={handleCreateChild}
-              />
-            ))}
-          </ul>
-        )}
-      </li>
-    </>
+      {children.length !== 0 && (
+        <ul
+          css={{
+            display: "flex",
+            justifyContent: "space-between",
+            padding: "1em",
+            position: "relative"
+          }}
+        >
+          {children.map(child => (
+            <Employee
+              employee={child}
+              getChildren={getChildren}
+              key={child.id}
+              handleCreateChild={handleCreateChild}
+            />
+          ))}
+        </ul>
+      )}
+    </li>
   );
 }
 
