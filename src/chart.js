@@ -44,7 +44,7 @@ function Chart({ employees, handleCreateChild }) {
         {/* employees.map para recorrer el array de employeee y generar un componente de Employee por cada uno */}
         {employees.map(employee => (
           <Employee
-            employee={employee}
+            employee={employee.name}
             getChildren={getChildren}
             handleCreateChild={handleCreateChild}
           />
