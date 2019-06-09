@@ -2,15 +2,45 @@
 
 exports[`Testing the new chart render 1`] = `
 <DocumentFragment>
-  .emotion-8 {
-  position: relative;
-  padding: 1em 0;
-  white-space: nowrap;
-  margin: 0 auto;
-  text-align: center;
+  .emotion-22 {
+  padding: 16px;
 }
 
-.emotion-3 {
+.emotion-2 {
+  text-align: center;
+  margin: 1em;
+}
+
+.emotion-0 {
+  font-size: 25px;
+}
+
+.emotion-1 {
+  opacity: 0.8;
+}
+
+.emotion-7 {
+  background: #fff;
+  border-radius: 8px;
+  color: #123;
+  box-shadow: 2px 4px 24px 0 rgba(0,0,0,0.15);
+  margin-bottom: 1.5em;
+}
+
+.emotion-6 {
+  padding: 16px;
+  box-shadow: 2px 4px 24px 0 rgba(0,0,0,0.15);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-6 span:last-child svg {
+  display: none;
+}
+
+.emotion-5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -19,109 +49,278 @@ exports[`Testing the new chart render 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  position: relative;
-  text-align: center;
-  list-style-type: none;
-  padding: 1em 0.5em 0 0.5em;
 }
 
-.emotion-0 {
-  border: 1px solid #ccc;
-  padding: 0.5em 0.75em;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  display: inline-block;
-  border-radius: 5px;
-  color: #333;
-  position: relative;
-  top: 1px;
+.emotion-3 {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
 }
 
 .emotion-4 {
+  margin: 5px;
+  color: #979797;
+}
+
+.emotion-21 {
+  background: #fff;
+  border-radius: 8px;
+  color: #123;
+  box-shadow: 2px 4px 24px 0 rgba(0,0,0,0.15);
+}
+
+.emotion-13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  padding: 1em;
-  position: relative;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 16px;
+  box-shadow: 2px 4px 24px 0 rgba(0,0,0,0.15);
+}
+
+.emotion-8 {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.emotion-11 {
+  margin: 0 8px;
+  line-height: 1.3;
+}
+
+.emotion-9 {
+  text-transform: capitalize;
+  margin: 0;
+  font-size: 18px;
+}
+
+.emotion-10 {
+  color: #979797;
+  margin: 0;
+}
+
+.emotion-12 {
+  width: 36px;
+  height: 36px;
+  background-color: #d9e7fd;
+  border: 0;
+  padding: 0;
+  border-radius: 50%;
+  color: #223fce;
+  font-size: 24px;
+  cursor: pointer;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50px;
+  margin: auto;
+  padding-bottom: 4px;
+  z-index: 9;
+  display: none;
+}
+
+.emotion-12:hover {
+  display: block;
+}
+
+.emotion-12:focus {
+  outline: none;
+}
+
+.emotion-20 {
+  margin: 0;
+  padding: 16px;
+  list-style: none;
+  min-height: 100px;
+}
+
+.emotion-19 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-bottom: 2px solid #ececec;
+  color: #000;
+}
+
+.emotion-14 {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.emotion-17 {
+  margin: 0 8px;
+}
+
+.emotion-15 {
+  text-transform: capitalize;
+  margin: 0;
+  font-size: 18px;
+}
+
+.emotion-16 {
+  color: #979797;
+  margin: 0;
+}
+
+.emotion-18 {
+  background-color: #d9e7fd;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-left: auto;
+  border-radius: 50%;
+  color: #223fce;
+  width: 36px;
+  height: 36px;
 }
 
 <div
-    class="tree"
+    class="emotion-22"
   >
-    <ul
-      class="emotion-8"
+    <div
+      class="emotion-2"
     >
-      <li
-        class="emotion-3"
+      <h1
+        class="emotion-0"
+      >
+        Company Name
+      </h1>
+      <h4
+        class="emotion-1"
+      >
+        Organization chart
+      </h4>
+    </div>
+    <div
+      class="emotion-7"
+    >
+      <div
+        class="emotion-6"
+      >
+        <span
+          class="emotion-5"
+          role="menuitem"
+        >
+          <img
+            alt="123"
+            class="emotion-3"
+          />
+          <svg
+            class="emotion-4"
+            fill="none"
+            height="24"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <polyline
+              points="9 18 15 12 9 6"
+            />
+          </svg>
+        </span>
+      </div>
+    </div>
+    <div
+      class="emotion-21"
+    >
+      <div
+        class="emotion-13"
+      >
+        <img
+          alt="CEO"
+          class="emotion-8"
+        />
+        <div
+          class="emotion-11"
+        >
+          <h4
+            class="emotion-9"
+          >
+            CEO
+          </h4>
+          <div
+            class="emotion-10"
+          >
+            CEO
+          </div>
+        </div>
+        <button
+          class="emotion-12"
+          type="button"
+        >
+          +
+        </button>
+      </div>
+      <article
+        class="emotion-20"
       >
         <div
-          class="emotion-0"
+          class="emotion-19"
         >
-          CEO - CEO
-          <form>
-            <input
-              aria-label="Employee name"
-              id="employee-name"
-              placeholder="Employee name"
-              type="text"
-              value=""
-            />
-          </form>
-        </div>
-        <ul
-          class="emotion-4"
-        >
-          <li
-            class="emotion-3"
+          <img
+            alt="123"
+            class="emotion-14"
+          />
+          <div
+            class="emotion-17"
           >
+            <h4
+              class="emotion-15"
+            >
+              Carlos
+            </h4>
             <div
-              class="emotion-0"
+              class="emotion-16"
             >
-              Carlos - Dev
-              <form>
-                <input
-                  aria-label="Employee name"
-                  id="employee-name"
-                  placeholder="Employee name"
-                  type="text"
-                  value=""
-                />
-              </form>
+              Dev
             </div>
-            <ul
-              class="emotion-4"
+          </div>
+          <div
+            class="emotion-18"
+          >
+            <svg
+              fill="none"
+              height="24"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <li
-                class="emotion-3"
-              >
-                <div
-                  class="emotion-0"
-                >
-                  Daniel - Dev
-                  <form>
-                    <input
-                      aria-label="Employee name"
-                      id="employee-name"
-                      placeholder="Employee name"
-                      type="text"
-                      value=""
-                    />
-                  </form>
-                </div>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-    </ul>
+              <polyline
+                points="9 18 15 12 9 6"
+              />
+            </svg>
+          </div>
+        </div>
+      </article>
+    </div>
   </div>
 </DocumentFragment>
 `;

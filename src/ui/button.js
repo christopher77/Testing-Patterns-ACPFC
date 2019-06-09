@@ -12,6 +12,7 @@ function Button({ children, ...props }) {
     border: "none",
     fontFamily: "inherit",
     fontSize: "16px",
+    cursor: "pointer",
     height: "40px",
     lineHeight: "42px",
     ":focus": {

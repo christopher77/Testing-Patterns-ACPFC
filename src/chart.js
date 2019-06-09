@@ -4,14 +4,14 @@ import { jsx, Global } from "@emotion/core";
 import Employee from "./employee";
 import MobileChart from "./MobileChart";
 
-const initialMobile = window.innerWidth < 700;
+const initialMobile = window.innerWidth < 1200;
 
 function Chart({ employees, handleCreateChild }) {
   const [mobile, setMobile] = React.useState(initialMobile);
 
   React.useEffect(() => {
     function updateDimensions() {
-      if (window.innerWidth < 700) {
+      if (window.innerWidth < 1200) {
         setMobile(true);
       } else {
         setMobile(false);
