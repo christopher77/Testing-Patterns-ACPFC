@@ -63,7 +63,7 @@ function Avatar({ user, ...props }) {
 
 function Employee({ employee, onClick }) {
   return (
-    <li css={item}>
+    <div css={item}>
       <img src={employee.photo} css={avatar} alt="123" />
       <div
         css={{
@@ -76,7 +76,7 @@ function Employee({ employee, onClick }) {
       <div css={wrapIcon} onClick={onClick}>
         <ChevronRigth />
       </div>
-    </li>
+    </div>
   );
 }
 
@@ -186,7 +186,7 @@ function MobileChart({ getChildren, parent, handleCreateChild }) {
           />
         </div>
 
-        <ul css={items}>
+        <article css={items}>
           {getChildren(employeActive.id).map(employee => (
             <Employee
               key={employee.id}
@@ -194,7 +194,7 @@ function MobileChart({ getChildren, parent, handleCreateChild }) {
               employee={employee}
             />
           ))}
-        </ul>
+        </article>
       </div>
     </div>
   );

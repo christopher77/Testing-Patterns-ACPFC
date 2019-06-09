@@ -48,9 +48,10 @@ function Employee({ employee, handleCreateChild, ...props }) {
           position: "absolute",
           left: 0,
           right: 0,
-          top: 56,
+          top: 50,
           margin: "auto",
           paddingBottom: 4,
+          zIndex: 9,
           display: "none",
           ":hover": { display: "block" },
           ":focus": { outline: "none" }

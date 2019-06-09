@@ -63,7 +63,7 @@ const global = css`
       &:before {
         content: "";
         position: absolute;
-        top: 0;
+        top: -1em;
         left: 50%;
         border-left: 1px solid #ccc;
         width: 0;
