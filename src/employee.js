@@ -126,7 +126,7 @@ function Employee({ employee, getChildren, handleCreateChild }) {
                   display: "block",
                   transition: "border-bottom-color 300ms ease",
                   ":focus": {
-                    borderBottomColor: blue
+                    borderBottomColor: "blue"
                   }
                 }}
               />
