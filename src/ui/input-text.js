@@ -8,11 +8,12 @@ function InputText({ ...props }) {
       {...props}
       css={{
         width: "100%",
+        marginTop: "16px",
+        display: "block",
         fontSize: 18,
         border: "1px solid #cecece",
         height: "40px",
         borderRadius: "4px",
-        border: "solid 1px #cecece",
         fontFamily: "inherit",
         padding: "0 16px",
         boxSizing: "border-box",
