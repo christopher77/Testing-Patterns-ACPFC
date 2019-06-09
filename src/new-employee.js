@@ -137,6 +137,7 @@ function Employee({ employee, handleCreateChild, ...props }) {
                 value={fields.name}
                 onChange={handleChange}
                 css={{ marginBottom: "16px" }}
+                required
               />
               <label
                 htmlFor="title-employee"
@@ -155,6 +156,7 @@ function Employee({ employee, handleCreateChild, ...props }) {
                 value={fields.title}
                 onChange={handleChange}
                 css={{ marginBottom: "16px" }}
+                required
               />
               <label
                 htmlFor="photo-employee"
