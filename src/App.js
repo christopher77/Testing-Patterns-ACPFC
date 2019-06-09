@@ -1,6 +1,11 @@
+/** @jsx jsx */
 import React from "react";
+import { jsx } from "@emotion/core";
 import Form from "./form";
 import Chart from "./chart";
+import Button from "./ui/button";
+import Card from "./ui/card";
+import { centerView } from "./ui/styles";
 
 const initialEmployees = JSON.parse(localStorage.getItem("employees") || "[]");
 
@@ -8,11 +13,18 @@ function App() {
   const [nameCompany, setNameCompany] = React.useState(
     localStorage.getItem("company")
   );
+  const [start, setStart] = React.useState(
+    localStorage.getItem("start") || false
+  );
   const [employees, setEmployees] = React.useState(initialEmployees);
 
   React.useEffect(() => {
     localStorage.setItem("employees", JSON.stringify(employees));
   }, [employees]);
+
+  React.useEffect(() => {
+    localStorage.setItem("start", start);
+  }, [start]);
 
   function handleCompany(value) {
     localStorage.setItem("company", value);
@@ -28,6 +40,25 @@ function App() {
       parentId: parentId
     };
     setEmployees(state => [...new Set(state.concat(newEmployee))]);
+  }
+
+  if (!start) {
+    return (
+      <div css={centerView}>
+        <div>
+          <h1>Oh My Chart</h1>
+          <Card>
+            <div>
+              <p>
+                Create a organization chart Fast and simple Desktop and mobile
+                presentation
+              </p>
+              <Button onClick={() => setStart(false)}>Start</Button>
+            </div>
+          </Card>
+        </div>
+      </div>
+    );
   }
 
   if (!nameCompany) {

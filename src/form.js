@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import React from "react";
 import { jsx } from "@emotion/core";
+import { centerView } from "./ui/styles";
 
 function Form({ label, placeholder, saveName }) {
   const [currentValue, setCurrentValue] = React.useState("");
@@ -16,15 +17,7 @@ function Form({ label, placeholder, saveName }) {
   }
 
   return (
-    <div
-      css={{
-        height: "100vh",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        backgroundColor: "#f9f9f9"
-      }}
-    >
+    <div css={centerView}>
       <form
         onSubmit={setName}
         css={{
