@@ -2,7 +2,6 @@
 import React, { useState } from "react";
 import { jsx } from "@emotion/core";
 import "./Employee.css";
-import { blueBright } from "ansi-colors";
 
 function Employee({ employee, getChildren, handleCreateChild }) {
   const [child, setChild] = useState("");
@@ -106,8 +105,6 @@ function Employee({ employee, getChildren, handleCreateChild }) {
             >
               X
             </button>
-            <h3 css={{ margin: 0, fontWeight: "500", textAlign: "center" }}>
-            </h3>
             <form onSubmit={handleSubmit} disabled={child.includes(child)}>
               <input
                 type="text"
@@ -127,13 +124,13 @@ function Employee({ employee, getChildren, handleCreateChild }) {
                   display: "block",
                   transition: "border-bottom-color 300ms ease",
                   ":focus": {
-                    borderBottomColor: blueBright
+                    borderBottomColor: "#7E00F3"
                   }
                 }}
               />
               <button
                 css={{
-                  backgroundColor: "lightblue",
+                  backgroundColor: "28F6ED",
                   borderRadius: ".5rem",
                   color: "white",
                   width: "100%",
