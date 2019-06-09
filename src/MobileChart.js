@@ -22,7 +22,7 @@ function Avatar({ user, ...props }) {
 
   return (
     <span role="menuitem" css={wrap} {...props}>
-      <img src={user.image} css={avatar} alt="123" />
+      <img src={user.photo} css={avatar} alt="123" />
       <ChevronRigth css={icon} />
     </span>
   );
@@ -56,7 +56,7 @@ function Employee({ employee, onClick }) {
 
   return (
     <li css={item}>
-      <img src={employee.image} css={avatar} alt="123" />
+      <img src={employee.photo} css={avatar} alt="123" />
       <div
         css={{
           margin: "0 8px"
