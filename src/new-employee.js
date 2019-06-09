@@ -137,6 +137,7 @@ function Employee({ employee, handleCreateChild, ...props }) {
                 value={fields.name}
                 onChange={handleChange}
                 css={{ marginBottom: "16px" }}
+                required
               />
               <label
                 htmlFor="title-employee"
@@ -155,6 +156,7 @@ function Employee({ employee, handleCreateChild, ...props }) {
                 value={fields.title}
                 onChange={handleChange}
                 css={{ marginBottom: "16px" }}
+                required
               />
               <label
                 htmlFor="photo-employee"
@@ -163,8 +165,9 @@ function Employee({ employee, handleCreateChild, ...props }) {
                   textAlign: "left"
                 }}
               >
-                Photo employee
+                *Photo employee
               </label>
+              
               <InputText
                 htmlFor="photo-employee"
                 type="text"
@@ -173,6 +176,7 @@ function Employee({ employee, handleCreateChild, ...props }) {
                 value={fields.photo}
                 onChange={handleChange}
               />
+              <p css={{color: "grey"}}>*optional</p>
               <Button css={{ marginTop: 24 }} type="submit">
                 Create new
               </Button>
