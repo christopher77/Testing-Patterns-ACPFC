@@ -8,14 +8,13 @@ import Card from "./ui/card";
 import { centerView } from "./ui/styles";
 
 const initialEmployees = JSON.parse(localStorage.getItem("employees") || "[]");
+const initialStart = JSON.parse(localStorage.getItem("start") || "true");
 
 function App() {
   const [nameCompany, setNameCompany] = React.useState(
     localStorage.getItem("company")
   );
-  const [start, setStart] = React.useState(
-    localStorage.getItem("start") || false
-  );
+  const [start, setStart] = React.useState(initialStart);
   const [employees, setEmployees] = React.useState(initialEmployees);
 
   React.useEffect(() => {
@@ -23,7 +22,7 @@ function App() {
   }, [employees]);
 
   React.useEffect(() => {
-    localStorage.setItem("start", start);
+    localStorage.setItem("start", JSON.stringify(start));
   }, [start]);
 
   function handleCompany(value) {
@@ -42,7 +41,7 @@ function App() {
     setEmployees(state => [...new Set(state.concat(newEmployee))]);
   }
 
-  if (!start) {
+  if (start) {
     return (
       <div css={centerView}>
         <div>
