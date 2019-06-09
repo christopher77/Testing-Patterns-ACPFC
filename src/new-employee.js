@@ -52,7 +52,8 @@ function Employee({ employee, handleCreateChild, ...props }) {
           margin: "auto",
           paddingBottom: 4,
           display: "none",
-          ":hover": { display: "block" }
+          ":hover": { display: "block" },
+          ":focus": { outline: "none" }
         }}
       >
         +
@@ -60,7 +61,7 @@ function Employee({ employee, handleCreateChild, ...props }) {
       {isDialogOpen && (
         <div
           css={{
-            backgroundColor: "rgba(0, 0, 0, .5)",
+            backgroundColor: "rgba(0, 0, 0, .8)",
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
@@ -81,7 +82,7 @@ function Employee({ employee, handleCreateChild, ...props }) {
               position: "fixed",
               top: "50%",
               transform: "translateY(-50%)",
-              padding: "2rem 1rem",
+              padding: 24,
               width: "80%",
               maxWidth: 360,
               zIndex: 110
@@ -107,27 +108,67 @@ function Employee({ employee, handleCreateChild, ...props }) {
             >
               X
             </button>
-            <h3 css={{ margin: 0, fontWeight: "500", textAlign: "center" }}>
+            <h3
+              css={{
+                margin: 0,
+                fontWeight: "500",
+                textAlign: "center",
+                fontSize: "22px",
+                fontWeight: "bold"
+              }}
+            >
               Add new Employee
             </h3>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} css={{ textAlign: "left" }}>
+              <label
+                htmlFor="name-employee"
+                css={{
+                  margin: 0,
+                  textAlign: "left"
+                }}
+              >
+                Name employee
+              </label>
               <InputText
+                id="name-employee"
                 type="text"
-                placeholder="Employee"
+                placeholder="Name employee"
                 name="name"
                 value={fields.name}
                 onChange={handleChange}
+                css={{ marginBottom: "16px" }}
               />
+              <label
+                htmlFor="title-employee"
+                css={{
+                  margin: 0,
+                  textAlign: "left"
+                }}
+              >
+                Title employee
+              </label>
               <InputText
+                htmlFor="title-employee"
                 type="text"
-                placeholder="Title"
+                placeholder="CEO"
                 name="title"
                 value={fields.title}
                 onChange={handleChange}
+                css={{ marginBottom: "16px" }}
               />
+              <label
+                htmlFor="photo-employee"
+                css={{
+                  margin: 0,
+                  textAlign: "left"
+                }}
+              >
+                Photo employee
+              </label>
               <InputText
+                htmlFor="photo-employee"
                 type="text"
-                placeholder="Photo"
+                placeholder="Insert a URL"
                 name="photo"
                 value={fields.photo}
                 onChange={handleChange}
