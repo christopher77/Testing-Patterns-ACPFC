@@ -52,16 +52,7 @@ function App() {
     return (
       <div css={styles.centerView}>
         <div css={{ margin: "16px", width: "100%" }}>
-          <h1
-            css={{
-              fontSize: "32px",
-              fontWeight: "bold",
-              marginBottom: "16px",
-              textAlign: "center"
-            }}
-          >
-            Oh My Chart
-          </h1>
+          <h1 css={styles.title}>Oh My Chart</h1>
           <div css={styles.card}>
             <div
               css={{
@@ -89,6 +80,7 @@ function App() {
         saveName={handleCompany}
         label="Company name"
         placeholder="Add the name of your company"
+        nameCompany={nameCompany}
       />
     );
   }
@@ -99,6 +91,7 @@ function App() {
         saveName={handleNewCeo}
         label="Enter the name of the CEO"
         placeholder="Company CEO"
+        nameCompany={nameCompany}
       />
     );
 
