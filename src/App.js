@@ -29,15 +29,23 @@ function App() {
     setNameCompany(value);
   }
 
-  function handleCreateChild(value, title = "CEO", parentId = null) {
+  function handleCreateChild(fields, parentId = null) {
     const newEmployee = {
-      id: new Date().toString(),
-      name: value,
-      title,
-      image: "https://i.imgur.com/Go7SE1T.png",
+      id: new Date().toISOString(),
+      name: fields.name,
+      title: fields.title,
+      photo: fields.photo,
       parentId: parentId
     };
     setEmployees(state => [...new Set(state.concat(newEmployee))]);
+  }
+
+  function handleNewCeo(name) {
+    handleCreateChild({
+      name,
+      title: "CEO",
+      photo: "https://i.imgur.com/BXTixFL.png"
+    });
   }
 
   if (start) {
@@ -88,7 +96,7 @@ function App() {
   if (employees.length === 0)
     return (
       <Form
-        saveName={handleCreateChild}
+        saveName={handleNewCeo}
         label="Enter the name of the CEO"
         placeholder="Company CEO"
       />
