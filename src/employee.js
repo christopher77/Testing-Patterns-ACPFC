@@ -14,7 +14,6 @@ function Employee({ employee, getChildren, handleCreateChild }) {
         alignItems: "center",
         flexDirection: "column",
         position: "relative",
-        textAlign: "center",
         listStyleType: "none",
         padding: "1em 0.5em 0 0.5em",
         color: "black"
@@ -58,7 +57,8 @@ function Employee({ employee, getChildren, handleCreateChild }) {
           <span
             css={{
               fontSize: 14,
-              color: "#686565"
+              color: "#686565",
+              textAlign: "left"
             }}
           >
             {employee.title}
@@ -76,7 +76,8 @@ function Employee({ employee, getChildren, handleCreateChild }) {
             display: "flex",
             justifyContent: "space-between",
             margin: "1em",
-            position: "relative"
+            position: "relative",
+            padding: 0
           }}
         >
           {children.map(child => (
