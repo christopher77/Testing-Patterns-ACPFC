@@ -5,7 +5,7 @@ import Button from "./ui/button";
 import InputText from "./ui/input-text";
 import styles from "./ui/styles";
 
-function Employee({ employee, handleCreateChild }) {
+function Employee({ employee, handleCreateChild, ...props }) {
   const [fields, setFields] = useState({ name: "", title: "", photo: "" });
   const [isDialogOpen, setIsDialogOpen] = useState(false);
 
