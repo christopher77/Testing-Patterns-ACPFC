@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import React, { useState } from "react";
-import { jsx } from "@emotion/core";
-import "./Employee.css";
+import { jsx, Global } from "@emotion/core";
+import general from "./global";
 
 function Employee({ employee, getChildren, handleCreateChild }) {
   const [child, setChild] = useState("");
@@ -30,6 +30,8 @@ function Employee({ employee, getChildren, handleCreateChild }) {
   }
 
   return (
+    <>
+    <Global styles={general}/>
     <li
       css={{
         display: "flex",
@@ -170,6 +172,7 @@ function Employee({ employee, getChildren, handleCreateChild }) {
         </ul>
       )}
     </li>
+    </>
   );
 }
 
