@@ -88,26 +88,6 @@ function Employee({ employee, handleCreateChild, ...props }) {
               zIndex: 110
             }}
           >
-            <button
-              css={{
-                backgroundColor: "transparent",
-                borderRadius: ".5rem",
-                padding: ".75rem .5rem",
-                boxSizing: "border-box",
-                fontSize: ".9rem",
-                fontWeight: "500",
-                textTransform: "uppercase",
-                outline: "none",
-                border: "none",
-                position: "absolute",
-                top: "0",
-                right: "10px"
-              }}
-              aria-label="Close create employee dialog"
-              onClick={handleCloseClick}
-            >
-              X
-            </button>
             <h3
               css={{
                 margin: 0,
@@ -130,6 +110,7 @@ function Employee({ employee, handleCreateChild, ...props }) {
                 Name employee
               </label>
               <InputText
+                autocomplete="off"
                 id="name-employee"
                 type="text"
                 placeholder="Name employee"
@@ -149,6 +130,7 @@ function Employee({ employee, handleCreateChild, ...props }) {
                 Title employee
               </label>
               <InputText
+                autocomplete="off"
                 htmlFor="title-employee"
                 type="text"
                 placeholder="CEO"
@@ -167,8 +149,9 @@ function Employee({ employee, handleCreateChild, ...props }) {
               >
                 *Photo employee
               </label>
-              
+
               <InputText
+                autocomplete="off"
                 htmlFor="photo-employee"
                 type="text"
                 placeholder="Insert a URL"
@@ -176,10 +159,28 @@ function Employee({ employee, handleCreateChild, ...props }) {
                 value={fields.photo}
                 onChange={handleChange}
               />
-              <p css={{color: "grey"}}>*optional</p>
-              <Button css={{ marginTop: 24 }} type="submit">
-                Create new
-              </Button>
+              <div css={{ display: "flex", justifyContent: "flex-end" }}>
+                <Button
+                  css={{ marginTop: 24, order: "2", marginLeft: 8 }}
+                  type="submit"
+                >
+                  ADD
+                </Button>
+                <Button
+                  css={{
+                    marginTop: 24,
+                    textTransform: "capitalize",
+                    backgroundColor: "rgba(146, 146, 146, 0.16)",
+                    color: "black",
+                    order: "1"
+                  }}
+                  type="submit"
+                  aria-label="Close create employee dialog"
+                  onClick={handleCloseClick}
+                >
+                  Cancel
+                </Button>
+              </div>
             </form>
           </div>
         </div>
