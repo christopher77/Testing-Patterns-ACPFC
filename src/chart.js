@@ -27,7 +27,13 @@ function Chart({ employees, handleCreateChild }) {
   }
 
   if (mobile) {
-    return <MobileChart getChildren={getChildren} parent={employees[0]} />;
+    return (
+      <MobileChart
+        getChildren={getChildren}
+        parent={employees[0]}
+        handleCreateChild={handleCreateChild}
+      />
+    );
   }
 
   return (

@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { Global } from "@emotion/core";
 import App from "./App";
+import arrowsSyles from "./global";
 
 const globalStyles = {
   body: {
@@ -23,6 +24,7 @@ function Root() {
   return (
     <>
       <Global styles={globalStyles} />
+      <Global styles={arrowsSyles} />
       <App />
     </>
   );
