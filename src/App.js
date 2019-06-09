@@ -4,8 +4,7 @@ import { jsx } from "@emotion/core";
 import Form from "./form";
 import Chart from "./chart";
 import Button from "./ui/button";
-import Card from "./ui/card";
-import { centerView } from "./ui/styles";
+import styles from "./ui/styles";
 
 const initialEmployees = JSON.parse(localStorage.getItem("employees") || "[]");
 const initialStart = JSON.parse(localStorage.getItem("start") || "true");
@@ -43,18 +42,34 @@ function App() {
 
   if (start) {
     return (
-      <div css={centerView}>
-        <div>
-          <h1>Oh My Chart</h1>
-          <Card>
-            <div>
-              <p>
-                Create a organization chart Fast and simple Desktop and mobile
-                presentation
-              </p>
+      <div css={styles.centerView}>
+        <div css={{ margin: "16px", width: "100%" }}>
+          <h1
+            css={{
+              fontSize: "32px",
+              fontWeight: "bold",
+              marginBottom: "16px",
+              textAlign: "center"
+            }}
+          >
+            Oh My Chart
+          </h1>
+          <div css={styles.card}>
+            <div
+              css={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center"
+              }}
+            >
+              <h4>Create a organization chart</h4>
+              <h4>Fast and simple</h4>
+              <h4 css={{ marginBottom: "16px" }}>
+                Desktop and mobile presentation
+              </h4>
               <Button onClick={() => setStart(false)}>Start</Button>
             </div>
-          </Card>
+          </div>
         </div>
       </div>
     );
@@ -64,8 +79,8 @@ function App() {
     return (
       <Form
         saveName={handleCompany}
-        label="Enter the name of the Company"
-        placeholder="Company name"
+        label="Company name"
+        placeholder="Add the name of your company"
       />
     );
   }

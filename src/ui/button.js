@@ -8,8 +8,15 @@ function Button({ children, ...props }) {
     backgroundColor: "rgba(17, 107, 242, 0.16)",
     textTransform: "uppercase",
     color: "#223fce",
-    padding: "16px 32px",
-    border: "none"
+    padding: "0 32px",
+    border: "none",
+    fontFamily: "inherit",
+    fontSize: "16px",
+    height: "40px",
+    lineHeight: "42px",
+    ":focus": {
+      outline: "none"
+    }
   };
   return (
     <button css={styleButton} {...props}>
