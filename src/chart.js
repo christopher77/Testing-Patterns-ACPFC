@@ -41,14 +41,11 @@ function Chart({ employees, handleCreateChild }) {
           textAlign: "center"
         }}
       >
-        {/* employees.map para recorrer el array de employeee y generar un componente de Employee por cada uno */}
-        {employees.map(employee => (
-          <Employee
-            employee={employee.name}
-            getChildren={getChildren}
-            handleCreateChild={handleCreateChild}
-          />
-        ))}
+        <Employee
+          employee={employees[0]}
+          getChildren={getChildren}
+          handleCreateChild={handleCreateChild}
+        />
       </ul>
     </div>
   );
