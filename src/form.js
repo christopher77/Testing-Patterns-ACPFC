@@ -1,6 +1,9 @@
 /** @jsx jsx */
 import React from "react";
 import { jsx } from "@emotion/core";
+import styles from "./ui/styles";
+import Button from "./ui/button";
+import InputText from "./ui/input-text";
 
 function Form({ label, placeholder, saveName }) {
   const [currentValue, setCurrentValue] = React.useState("");
@@ -16,25 +19,15 @@ function Form({ label, placeholder, saveName }) {
   }
 
   return (
-    <div
-      css={{
-        height: "100vh",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center"
-      }}
-    >
+    <div css={styles.centerView}>
       <form
         onSubmit={setName}
         css={{
-          margin: "auto",
-          backgroundColor: "white",
-          borderRadius: ".5rem",
-          padding: "2rem 1rem",
-          fontSize: "25px",
-          width: "80%",
-          maxWidth: 360,
-          textAlign: "center"
+          ...styles.card,
+          ...styles.secureArea,
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "flex-start"
         }}
       >
         <label
@@ -48,19 +41,7 @@ function Form({ label, placeholder, saveName }) {
         >
           {label}
         </label>
-        <input
-          css={{
-            border: "none",
-            padding: ".5rem 1rem",
-            fontSize: "1.2rem",
-            boxSizing: "border-box",
-            width: "100%",
-            outline: "none",
-            transition: "border-bottom-color 300ms ease",
-            ":focus": {
-              borderBottomColor: "#7E00F3"
-            }
-          }}
+        <InputText
           id="name"
           required="required"
           autoComplete="off"
@@ -69,23 +50,9 @@ function Form({ label, placeholder, saveName }) {
           onChange={onChangeInputName}
           value={currentValue}
         />
-        <button
-          css={{
-            backgroundColor: "blue",
-            borderRadius: ".5rem",
-            color: "white",
-            width: "100%",
-            padding: ".75rem .5rem",
-            boxSizing: "border-box",
-            fontSize: ".9rem",
-            fontWeight: "500",
-            textTransform: "uppercase",
-            outline: "none"
-          }}
-          type="submit"
-        >
+        <Button css={{ marginTop: 24, alignSelf: "flex-end" }} type="submit">
           Next
-        </button>
+        </Button>
       </form>
     </div>
   );
