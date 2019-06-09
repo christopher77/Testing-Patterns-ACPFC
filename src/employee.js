@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { jsx, Global } from "@emotion/core";
 import NewEmployee from "./new-employee";
+import styles from "./ui/styles";
 
 function Employee({ employee, getChildren, handleCreateChild }) {
   const children = getChildren(employee.id);
@@ -15,25 +16,58 @@ function Employee({ employee, getChildren, handleCreateChild }) {
         position: "relative",
         textAlign: "center",
         listStyleType: "none",
-        padding: "1em 0.5em 0 0.5em"
+        padding: "1em 0.5em 0 0.5em",
+        color: "black"
       }}
     >
       <div
         css={{
-          border: "1px solid #ccc",
-          padding: "0.5em 0.75em",
-          textDecoration: "none",
-          display: "inline-block",
-          borderRadius: "5px",
-          color: "#333",
-          position: "relative",
-          top: "1px"
+          ...styles.center,
+          backgroundColor: "white",
+          borderRadius: 4,
+          height: 56,
+          padding: 8,
+          boxSizing: "border-box",
+          width: 200,
+          justifyContent: "flex-start",
+          ":hover>button": { display: "block" }
         }}
       >
-        {employee.name} - {employee.title}
+        <img
+          src={employee.photo}
+          alt="123"
+          width="40"
+          height="40"
+          css={{
+            borderRadius: "50%",
+            overflow: "hidden",
+            backgroundColor: "rgba(0, 0, 0, 0.1)"
+          }}
+        />
+        <p
+          css={{
+            display: "flex",
+            flexDirection: "column",
+            fontSize: 16,
+            lineHeight: "18px",
+            margin: 0,
+            marginLeft: 8
+          }}
+        >
+          <span>{employee.name}</span>
+          <span
+            css={{
+              fontSize: 14,
+              color: "#686565"
+            }}
+          >
+            {employee.title}
+          </span>
+        </p>
         <NewEmployee
           handleCreateChild={handleCreateChild}
           employee={employee}
+          css={{ position: "relatve" }}
         />
       </div>
       {children.length !== 0 && (
@@ -41,7 +75,7 @@ function Employee({ employee, getChildren, handleCreateChild }) {
           css={{
             display: "flex",
             justifyContent: "space-between",
-            padding: "1em",
+            margin: "1em",
             position: "relative"
           }}
         >

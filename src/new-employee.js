@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { jsx } from "@emotion/core";
 import Button from "./ui/button";
 import InputText from "./ui/input-text";
+import styles from "./ui/styles";
 
 function Employee({ employee, handleCreateChild }) {
   const [fields, setFields] = useState({ name: "", title: "", photo: "" });
@@ -11,7 +12,7 @@ function Employee({ employee, handleCreateChild }) {
   function handleOpenClick(event) {
     setIsDialogOpen(true);
     event.target.blur();
-  } 
+  }
 
   function handleCloseClick(event) {
     setIsDialogOpen(false);
@@ -31,7 +32,29 @@ function Employee({ employee, handleCreateChild }) {
 
   return (
     <>
-      <button type="button" onClick={handleOpenClick}>
+      <button
+        type="button"
+        onClick={handleOpenClick}
+        css={{
+          width: "36px",
+          height: "36px",
+          backgroundColor: "#d9e7fd",
+          border: 0,
+          padding: 0,
+          borderRadius: "50%",
+          color: "#223fce",
+          fontSize: 24,
+          cursor: "pointer",
+          position: "absolute",
+          left: 0,
+          right: 0,
+          top: 56,
+          margin: "auto",
+          paddingBottom: 4,
+          display: "none",
+          ":hover": { display: "block" }
+        }}
+      >
         +
       </button>
       {isDialogOpen && (
