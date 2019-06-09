@@ -32,7 +32,7 @@ function Employee({ employee, getChildren, handleCreateChild }) {
           ":hover>button": { display: "block" }
         }}
       >
-        <img
+        {employee.photo && <img
           src={employee.photo}
           alt="123"
           width="40"
@@ -42,7 +42,8 @@ function Employee({ employee, getChildren, handleCreateChild }) {
             overflow: "hidden",
             backgroundColor: "rgba(0, 0, 0, 0.1)"
           }}
-        />
+        />}
+        
         <p
           css={{
             display: "flex",
