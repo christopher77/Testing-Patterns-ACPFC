@@ -183,6 +183,12 @@ function MobileChart({ getChildren, parent, handleCreateChild }) {
           <NewEmployee
             employee={employeActive}
             handleCreateChild={handleCreateChild}
+            styleButton={{
+              display: "block",
+              position: "static",
+              marginLeft: "auto",
+              marginRight: "inherit"
+            }}
           />
         </div>
 
