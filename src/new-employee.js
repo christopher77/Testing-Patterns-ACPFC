@@ -5,7 +5,7 @@ import Button from "./ui/button";
 import InputText from "./ui/input-text";
 import styles from "./ui/styles";
 
-function Employee({ employee, handleCreateChild, ...props }) {
+function Employee({ employee, handleCreateChild, styleButton, ...props }) {
   const [fields, setFields] = useState({ name: "", title: "", photo: "" });
   const [isDialogOpen, setIsDialogOpen] = useState(false);
 
@@ -54,7 +54,8 @@ function Employee({ employee, handleCreateChild, ...props }) {
           zIndex: 9,
           display: "none",
           ":hover": { display: "block" },
-          ":focus": { outline: "none" }
+          ":focus": { outline: "none" },
+          ...styleButton
         }}
       >
         +
